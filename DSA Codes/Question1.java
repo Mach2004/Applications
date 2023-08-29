@@ -24,12 +24,12 @@ public class Question1 {
             s1[i].roll = input.nextInt();
             s1[i].Marks = input.nextFloat();
             s1[i].name = input.next();
-            s1[i].show();
+
         }
 
         sort(s1);
 
-        System.out.println("Sorted Students:");
+        System.out.println("Sorted Students according to there marks:");
         for (Student student : s1) {
             student.show();
         }
@@ -38,7 +38,7 @@ public class Question1 {
     static void sort(Student[] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 1; j < arr.length - i; j++) {
-                if (arr[j].roll < arr[j - 1].roll) {
+                if (arr[j].Marks > arr[j - 1].Marks) {
                     Student temp = arr[j];
                     arr[j] = arr[j - 1];
                     arr[j - 1] = temp;
